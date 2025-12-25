@@ -1,8 +1,9 @@
 # 🌌 Mission: The Jovian Drift SOS
 
 ## 📋 Objective
-Construct the emergency transmission interface for the shuttle Europa-1. 
-You are currently in orbit around Jupiter, and your only hope is to send a 
+
+Construct the emergency transmission interface for the shuttle Europa-1.
+You are currently in orbit around Jupiter, and your only hope is to send a
 high-priority distress signal to Earth.
 
 ---
@@ -24,6 +25,7 @@ high-priority distress signal to Earth.
 ## 🛠️ Instructions for Students
 
 ### Phase 1: The Transmission Protocol (The Form)
+
 The signal contains sensitive biometric and mission data, so it must be sent securely.
 
 - Create a `<form>` element inside the `<body>` tag
@@ -34,11 +36,13 @@ The signal contains sensitive biometric and mission data, so it must be sent sec
 ---
 
 ### Phase 2: Pilot Credentials (Fieldset 1)
+
 Earth needs to know who is sending the message.
 
 1. Create a `<fieldset>` with a `<legend>` titled **"Pilot Credentials"**
 
-2. **Pilot Name:** 
+2. **Pilot Name:**
+
    - Create a `<label>` element with the text "Pilot Name:"
    - Give the label a `for` attribute with a unique value (like "pilot-name")
    - Create an `<input>` element with `type` attribute set to "text"
@@ -47,7 +51,8 @@ Earth needs to know who is sending the message.
    - Add the `required` attribute (boolean attribute, no value needed)
    - Add a `placeholder` attribute with the value "Enter name"
 
-3. **Access Code:** 
+3. **Access Code:**
+
    - Create a `<label>` element with the text "Access Code:"
    - Give it a `for` attribute with a unique identifier
    - Create an `<input>` element with `type` attribute set to "password"
@@ -55,7 +60,7 @@ Earth needs to know who is sending the message.
    - Add a `name` attribute (like "access_code")
    - Add the `required` attribute
 
-4. **Command Email:** 
+4. **Command Email:**
    - Create a `<label>` element with the text "Command Email:"
    - Give it a `for` attribute with a unique identifier
    - Create an `<input>` element with `type` attribute set to "email"
@@ -66,11 +71,13 @@ Earth needs to know who is sending the message.
 ---
 
 ### Phase 3: Vessel Diagnostics (Fieldset 2)
+
 The rescue team needs to know the state of your ship.
 
 1. Create a `<fieldset>` with a `<legend>` titled **"Vessel Diagnostics"**
 
-2. **Hull Damage:** 
+2. **Hull Damage:**
+
    - Create a `<label>` element with the text "Hull Damage (%):"
    - Give it a `for` attribute with a unique identifier
    - Create an `<input>` element with `type` attribute set to "number"
@@ -78,7 +85,7 @@ The rescue team needs to know the state of your ship.
    - Add a `name` attribute (like "hull_damage")
    - Add the `required` attribute
 
-3. **Emergency Level:** 
+3. **Emergency Level:**
    - Create a `<label>` element with the text "Emergency Level:"
    - Give it a `for` attribute with a unique identifier
    - Create a `<select>` element (this creates a dropdown menu)
@@ -92,11 +99,13 @@ The rescue team needs to know the state of your ship.
 ---
 
 ### Phase 4: Mission Log & Evidence (Fieldset 3)
+
 Explain the situation and agree to safety protocols.
 
 1. Create a `<fieldset>` with a `<legend>` titled **"Mission Log & Evidence"**
 
-2. **SOS Message:** 
+2. **SOS Message:**
+
    - Create a `<label>` element with the text "SOS Message:"
    - Give it a `for` attribute with a unique identifier
    - Create a `<textarea>` element (note: this is NOT an input element)
@@ -105,7 +114,7 @@ Explain the situation and agree to safety protocols.
    - Add the `required` attribute to the textarea
    - Add a `rows` attribute with the value "3" (this sets the visible height)
 
-3. **Quarantine Agreement:** 
+3. **Quarantine Agreement:**
    - Create a `<div>` element as a container wrapper
    - Inside the div, create an `<input>` element with `type` attribute set to "checkbox"
    - Give the checkbox an `id` attribute (like "quarantine")
@@ -117,11 +126,12 @@ Explain the situation and agree to safety protocols.
 ---
 
 ### Phase 5: The Control Panel (Buttons)
+
 Your code is only valid if you can send it!
 
 - Create a `<button>` element with a `type` attribute set to "submit"
 - The button's text content should be: "INITIATE TRANSMISSION"
-- Create a second `<button>` element with a `type` attribute set to "reset"  
+- Create a second `<button>` element with a `type` attribute set to "reset"
 - The button's text content should be: "RESET SYSTEM"
 - Place both buttons inside the form, typically after all fieldsets
 
@@ -152,10 +162,11 @@ We know about the WOW effect :)
 Once your form is complete and working, add these final touches:
 
 **Step 1: Add the CSS stylesheet link**
+
 - In the `<head>` section, find the `<title>` element
 - Right AFTER the `</title>` closing tag, add this exact code:
   ```html
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css" />
   ```
 - Your code should look like this:
   ```html
@@ -165,6 +176,7 @@ Once your form is complete and working, add these final touches:
   ```
 
 **Step 2: Add the animated background iframe**
+
 - In the `<body>` section, find your opening `<form>` tag
 - Right BEFORE the `<form>` tag, add this exact code:
   ```html
@@ -173,12 +185,14 @@ Once your form is complete and working, add these final touches:
 - Your code should look like this:
   ```html
   <body>
-      <iframe id="bg-frame" src="./styles/effect.html"></iframe>
-      
-      <form method="post" action="#">
+    <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+
+    <form method="post" action="#"></form>
+  </body>
   ```
 
 **Step 3: Add the launch control script**
+
 - In the `<body>` section, find the closing `</body>` tag (it should be the very last line of your HTML)
 - Right BEFORE the `</body>` tag, add this exact code:
   ```html
@@ -188,13 +202,14 @@ Once your form is complete and working, add these final touches:
 - Your code should look like this at the end:
   ```html
       </form>
-      
+
       <script src="./scripts/launch.js"></script>
   </body>
   </html>
   ```
 
 **Important Notes:**
+
 - The CSS link must be in the `<head>` section (where all stylesheets go)
 - The iframe must be in the `<body>` section (only visible content goes here)
 - Make sure the iframe comes BEFORE your form in the body
